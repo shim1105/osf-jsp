@@ -15,6 +15,11 @@ public class DBCon {
 	private static final String PASSWORD;
 	private static final String DRIVER;
 	private static Connection con = null;
+	public static final String CLIENTID;
+	public static final String CLIENTSECRET;
+	public static final String NAVER_URL;
+	public static final String METHOD;
+	
 	static { // 여기서 초기화 여기선느 실행부가 가능해서 여기서 돌린ㄴ느 것도 있음 .
 		InputStream is = ReadFile.class.getResourceAsStream("/com/osf/test/config/db.properties");
 		Properties prop = new Properties();
@@ -28,6 +33,10 @@ public class DBCon {
 		USER = prop.getProperty("user");
 		PASSWORD = prop.getProperty("password");
 		DRIVER = prop.getProperty("classname");
+		CLIENTID = prop.getProperty("clientId");
+		CLIENTSECRET=prop.getProperty("clientSecret");
+		NAVER_URL = prop.getProperty("naverUrl");
+		METHOD = prop.getProperty("method");
 
 	}
 
